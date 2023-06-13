@@ -9,10 +9,13 @@ namespace taskResult
         static void Main(string[] args)
         {
             ChildAsync task = new ChildAsync();
-            Console.WriteLine(task.RunTaskAAsync().Result);
-            //int a = x.RunTaskAAsync().Result;
+            //int a = task.RunTaskAAsync().Result;
             //Console.WriteLine(a);
-            Console.WriteLine(task.RunTaskB());
+
+            //Console.WriteLine(task.RunTaskAAsync().Result);
+            //Console.WriteLine(task.RunTaskB());
+
+            Console.WriteLine(task.MyHttpGetAsync("https://www.google.com").Result);
         }
     }
 }
